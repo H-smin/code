@@ -77,8 +77,8 @@ function App() {
                   {
                     data.map((item, index) => {
                       return (
-                        <p className='lessons'>
-                          <p className='lesson-img'><img alt='img' src={item.url} width='140px' height='84px' /></p>
+                        <p className='lessons' key={index}>
+                          <p className='lesson-img'><img alt='img' src={item.url} width='140px' height='84px'/></p>
                           <p className='desc'><span className='tag'>{item.tag}</span>{item.desc}</p>
                         </p>
                       )

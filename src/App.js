@@ -9,17 +9,17 @@ function App() {
     {
       url: img2,
       tag: '日语',
-      desc: '字体设计修炼设计修炼设计大神之路…'
+      desc: '字体设计修炼设计修炼设计大神之路字体设计修炼设计修炼设计大神之路'
     },
     {
       url: img1,
       tag: '日语',
-      desc: '字体设计修炼设计修炼设计大神之路…'
+      desc: '字体设计修炼设计修炼设计大神之路字体设计修炼设计修炼设计大神之路'
     },
     {
       url: img3,
       tag: '日语',
-      desc: '字体设计修炼设计修炼设计大神之路…'
+      desc: '字体设计修炼设计修炼设计大神之路字体设计修炼设计修炼设计大神之路'
     }
   ]
   return (
@@ -28,67 +28,76 @@ function App() {
         <React.Fragment>
           <div className='header'>
             <div className='study-time'>
-              <p className='days'>学习<span className='number'>32</span>天</p>
-              <p className='hours'>时长<span className='number'>64</span>小时</p>
+              <div className='days'>学习<span className='number'>32</span>天</div>
+              <div className='hours'>时长<span className='number'>64</span>小时</div>
             </div>
           </div>
           <div className='main-content'>
+            <div className='user-info'>
             <div className='header-image'>
               <span className='image'></span>
             </div>
-            <div className='user-info'>
               <div className='icons'>
                 <span className='message'></span>
-                <span className='followed-box'>
-                  <p className='un-followed'>关注</p>
-                  <p className='followed'>已关注</p>
-                </span>
+                <div className='followed-box'>
+                  <div className='un-followed'>关注</div>
+                  {/* <p className='followed'>已关注</p> */}
+                </div>
               </div>
               <div className='user-intro'>
-                <p className='nickname'>可爱的小男孩</p>
-                <p className='username'>用户名：快乐的小猪</p>
-                <p className='signs'>学习使我快乐，我将永远拥有快乐！</p>
-                <p className='part-line'></p>
-                <p className='fans-box'>
+                <div className='nickname text-eli'>可爱的小男孩</div>
+                <div className='username text-eli'>用户名：快乐的小猪</div>
+                <div className='signs text-eli'>学习使我快乐，我将永远拥有快乐！</div>
+                <div className='part-line'></div>
+                <div className='fans-box'>
                   <div className='followed-num'>
-                    <p className='num'>1.2万</p>
-                    <p className='status'>关注</p>
+                    <div className='num'>1.2万</div>
+                    <div className='status'>关注</div>
                   </div>
                   <div className='fans-num single'>
-                    <p className='num'>2999</p>
-                    <p className='status'>粉丝</p>
+                    <div className='num'>2999</div>
+                    <div className='status'>粉丝</div>
                   </div>
                   <div className='visite-num'>
                     <div className='visite-img-box'>
-                      <p className='visite-img'></p>
-                      <p className='visite-img'></p>
-                      <p className='visite-img'></p>
+                      <div className='visite-img'></div>
+                      <div className='visite-img overlap'></div>
+                      <div className='visite-img overlap'></div>
                     </div>
-                    <p className='status'>来访9999人</p>
+                    <div className='status'>来访9999人</div>
                   </div>
-                </p>
+                </div>
                 <div className='medal'>
                   <span className='text'>获得5张奖状</span>
                 </div>
               </div>
               <div className='studying-lesson'>
-                <p className='title'>在学课程</p>
-                <div className='content'>
-                  {
-                    data.map((item, index) => {
-                      return (
-                        <p className='lessons' key={index}>
-                          <p className='lesson-img'><img alt='img' src={item.url} width='140px' height='84px'/></p>
-                          <p className='desc'><span className='tag'>{item.tag}</span>{item.desc}</p>
-                        </p>
-                      )
-                    })
-                  }
+                <div className='title'>在学课程</div>
+                <div className='content-box'>
+                  <div className='content'>
+                    {
+                      data.map((item, index) => {
+                        return (
+                          <div className='lessons' key={index}>
+                            <div className='lesson-img'><img alt='img' src={item.url} width='140px' height='84px' /></div>
+                            <div className='desc text-eli'><span className='tag'>{item.tag}</span>{item.desc}</div>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
                 </div>
               </div>
             </div>
             <div className='dynamic-area'>
-              <p>动态</p>
+              <div className='title'>动态</div>
+              <div className='dynamic-content'>
+                <div>
+                  <div className='user-img'></div>
+                  <div className='operate'>回复了帖子</div>
+                </div>
+                <div className='post-content'>5月16日作业：不知道为什么，今天真的有人跟我道歉来着，天助我完成作业也，上图看下我们的演练场景。</div>
+              </div>
             </div>
           </div>
         </React.Fragment>

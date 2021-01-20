@@ -70,20 +70,25 @@
   background: #E6EEFF;
   border-radius: 18px;
 }
+.followed-change{
+  display: none;
+}
 .followed-box {
   float: left;
+  width: 70px;
   margin-left: 22px;
   font-size: 12px;
   color: #FFFFFF;
   line-height: 32px;
 }
 .un-followed {
-  width: 70px;
-  line-height: 32px;
+  display: block;
   background: #2F5AFF;
   border-radius: 18px;
+  border: #2F5AFF 1px solid;
   text-align: center;
   cursor: pointer;
+  line-height: 32px;
 }
 .un-followed::before {
   content: '';
@@ -97,16 +102,18 @@
 }
 .followed {
   height: 32px;
-  margin-top: 9px;
   border-radius: 18px;
   border: 1px solid #2F5AFF;
   color: #2F5AFF;
+  text-align: center;
   }
 .followed::before {
   content: '';
   display: inline-block;
   width: 12px;
   height: 12px;
+  vertical-align: middle;
+  margin: -3px 5px 0 0;
   background-size: cover;
   background-image: url(./img/slices/Group\ 48@2x.png);
 }
